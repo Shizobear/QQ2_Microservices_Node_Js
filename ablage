@@ -1,0 +1,21 @@
+var newStudent = student({
+    vorname: "Peter",
+    nachname: "Parker",
+    matrikelnummer: 11102233,
+    studiengang: "MI",
+    semester: 35,
+    email: "iamnotspiderman@peterparker.de"
+});
+
+newStudent.save(function (err) {
+    if (err) throw err;
+
+    console.log('User created!');
+});
+
+student.find({}, function (err, users) {
+    if (err) throw err;
+
+    // object of all the users
+    console.log(users);
+});
